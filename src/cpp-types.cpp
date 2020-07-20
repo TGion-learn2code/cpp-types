@@ -7,9 +7,20 @@
 //============================================================================
 
 #include <iostream>
+#include <vector>
+#include <string>
+
 using namespace std;
 
-int main() {
-	cout << "Types" << endl; // prints Types
+int main(int argc, const char* argv[]) {
+
+	int i;
+	vector<string> vec_str;
+
+	for (i = 0; i < argc; i++)
+	{
+		vec_str.push_back(argv[i]);
+		std::cout << "Argument #" << i << " : " << vec_str[i] << std::endl;
+	}
 	return 0;
 }
